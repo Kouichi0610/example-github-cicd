@@ -1,10 +1,18 @@
+# イベント名
 name: Hello
 
+# push時に起動する
 on: push
 
+# ジョブ定義
 jobs:
+  # ジョブID
   hello:
+    # ランナー(ubuntuで実行)
     runs-on: ubuntu-latest
+    # ステップの定義
     steps:
+      # シェル万度の実行
       - run: echo "Hello World"
+      # アクションの呼び出し
       - uses: actions/checkout@v4
